@@ -1,2 +1,2 @@
-# Recipes_Ratings Website
-Project for dsc80 at UCSD
+# Exploratory Data Analysis on Recipes and Ratings
+Project for DSC 80 at UCSD
