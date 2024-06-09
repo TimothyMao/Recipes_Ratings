@@ -17,3 +17,5 @@ Our dataset has a total of 234429 rows and the relevant columns that we use cons
 'rating': the rating given to the recipe (0-5) stars
 'avg_rating': the average rating of each unique recipe (0-5) stars
 'review': user provided reviews of each recipe. 
+
+DATA CLEANING
