@@ -6,16 +6,16 @@ The data set we chose was the Recipe and Ratings dataset. Our project focuses on
 
 Our dataset has a total of 234429 rows and the relevant columns that we use consists of: 
 
-'recipe id': the id of the recipe
-'name': the name of the recipe
-'minutes': the number of minutes it takes to prepare the recipe
-'tags': tags from the website Food.com used for categorizing recipes
-'nutrition': a list that consists of [calories, total fat, sugar, sodium, protein, saturated fat, carbohydrates]
-'proteins_per_calorie': column which we made that gives the ratio of proteins to calories in terms of calories
-'n_steps': number of steps it takes to complete the recipe
-'description': user provided descriptions of the recipe
-'rating': the rating given to the recipe (0-5) stars
-'avg_rating': the average rating of each unique recipe (0-5) stars
-'review': user provided reviews of each recipe. 
+- 'recipe id': the id of the recipe
+- 'name': the name of the recipe
+- 'minutes': the number of minutes it takes to prepare the recipe
+- 'tags': tags from the website Food.com used for categorizing recipes
+- 'nutrition': a list that consists of [calories, total fat, sugar, sodium, protein, saturated fat, carbohydrates]
+- 'proteins_per_calorie': column which we made that gives the ratio of proteins to calories in terms of calories
+- 'n_steps': number of steps it takes to complete the recipe
+- 'description': user provided descriptions of the recipe
+- 'rating': the rating given to the recipe (0-5) stars
+- 'avg_rating': the average rating of each unique recipe (0-5) stars
+- 'review': user provided reviews of each recipe. 
 
 DATA CLEANING
