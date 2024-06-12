@@ -24,68 +24,58 @@ Our dataset has a total of 234429 rows and the relevant columns that we use cons
 
 The first step we took was merging the two dataframes: Recipe and Ratings. After merging, we saw that ratings had missing values but they were all categorized with 0's so we filled in the 0's with np.NaN's. We then proceeded to make an average rating column in which we use as our predictor variable. In order to get the ratio of proteins to calories, we accessed the 'nutrition' column and extracted the protein and calorie information and created a new column called 'proteins_per_calorie'. There were some values that were missing due to 0 calories or proteins so we filled those values in with 0. 
 
-<style>
-    .iframe-container {
-        margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
-    }
-</style>
 
-<div class="iframe-container">
-    <iframe
-        src="assets/fig_hist_protein_per_calorie.html"
-        width="800"
-        height="600"
-        frameborder="0"
-    ></iframe>
-</div>
+<iframe
+    src="assets/fig_hist_protein_per_calorie.html"
+    width="800"
+    height="600"
+    frameborder="0"
+></iframe>
+<br>
 <p>
     The figure above displays a univariate analysis of the proteins per calorie column. We can see how there is a right skew present with a mean around 0.1.
 </p>
 
-<div class="iframe-container">
-    <iframe
-        src="assets/box_fig.html"
-        width="800"
-        height="600"
-        frameborder="0"
-    ></iframe>
-</div>
+<iframe
+    src="assets/box_fig.html"
+    width="800"
+    height="600"
+    frameborder="0"
+></iframe>
+<br>
 <p>
     The figure above displays a bivariate analysis of proteins per calorie and its effect on average rating. There are slightly higher ratings for recipes that have a higher ratio of protein to calorie.
 </p>
 
-<div class="iframe-container">
-    <iframe
+<iframe
         src="assets/pivot_table.html"
         width="800"
         height="600"
         frameborder="0"
-    ></iframe>
-</div>
+></iframe>
+<br>
 <p>
     The table above displays a pivot table that groups the columns 'proteins per calorie', 'n_steps', and 'minutes' by each unique value and gets an aggregate analysis of the mean average rating. We start to see higher ratings with less proteins per calorie, n_steps, and minutes, and the ratings start to go down as they increase. However, as we approach the end, where 'proteins per calorie', 'n_steps', and 'minutes' are all at their highest, the mean average ratings are similar to the ones in the beginning. We suspect the reasoning behind this is people usually enjoy recipes that are quick and easy to make and not the longer ones as much. However, people also enjoy very long recipes as usually recipes with a long preparation result in an extremely tasty dish.
 </p>
 
-<div class="iframe-container">
-    <iframe
-        src="assets/fig_name.html"
-        width="800"
-        height="600"
-        frameborder="0"
-    ></iframe>
-</div>
+<iframe
+    src="assets/fig_name.html"
+    width="800"
+    height="600"
+    frameborder="0"
+></iframe>
+<br>
 <p>
     The distribution above shows a column in which 'average rating' does not depend on, namely, 'name'. We can see the observed statistic was 0.77 while there is a mean around 0.73 which is very close.
 </p>
 
-<div class="iframe-container">
-    <iframe
-        src="assets/fig_permutation.html"
-        width="800"
-        height="600"
-        frameborder="0"
-    ></iframe>
-</div>
+<iframe
+    src="assets/fig_permutation.html"
+    width="800"
+    height="600"
+    frameborder="0"
+></iframe>
+<<br>
 <p>
     The distribution above demonstrates that we do not have significant evidence to reject the null hypothesis that recipes that are macro-friendly (proteins per calorie = 0.25) on average (> 50%), have an average rating of at least 4.0 stars.
 </p>
