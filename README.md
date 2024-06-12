@@ -47,7 +47,7 @@ The figure above displays a bivariate analysis of proteins per calorie and its e
 
 <iframe
     src="assets/pivot_table.html"
-    width="800"
+    width="400"
     height="600"
     frameborder="0"
 ></iframe>
