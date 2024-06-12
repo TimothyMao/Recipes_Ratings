@@ -43,7 +43,7 @@ The figure above displays a univariate analysis of the proteins per calorie colu
 The figure above displays a bivariate analysis of proteins per calorie and its effect on average rating. There are slightly higher ratings for recipes that have a higher ratio of protein to calorie.
 
 <iframe
-  src="assets/aggregate_stats.html"
+  src="assets/pivot_table.html"
   width="800"
   height="600"
   frameborder="0"
