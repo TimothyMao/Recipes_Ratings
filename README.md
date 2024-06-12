@@ -80,6 +80,7 @@ The distribution above demonstrates that we do not have significant evidence to 
 The null hyothesis that we implemented in our model was to determine whether recipes that are macro-friendly (proteins per calorie = 0.25) on average (> 50%), have an average rating of at least 4.0 stars. Conversely, the alternative hypothesis was the the recipes that are macro friendly have an average rating less than 4.0 stars. To determine this, we decided that we would use an absolute difference of means as a test-statistic as we approached the model as a permutation test. The test statistic observed the absolute difference of the observed proportion of data given by the macro-friendly recipes subtracted by an observance level of 0.5 since that is the value being tested through the null and alternative hypothesis. We believed that a permutation test was applicable for this model as we were comparing different distributions and not referring to the a population parameter. Similarly, an absolute difference in means fit the the test based on the data we observed. Given our choice of significance level, which was (fill here) because we believed this was reasonable in relation to the data, after the computation of the p-value came out to be (fill here), we concluded we do not have sufficient evidence to reject the null hypothesis and therefore it is likely that the macro-friendly recipes have an average rating of at least 4 stars. *could change last sentence here
 
 ## Framing a Prediction Problem
+
 ## Baseline Model
 ## Final Model
 ## Fairness Analysis
