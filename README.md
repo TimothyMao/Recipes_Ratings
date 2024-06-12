@@ -89,3 +89,43 @@ The null hypothesis that we implemented in our model was that the ratio of recip
 
 The distribution above demonstrates that we have significant evidence to reject the null hypothesis that the proportion recipes that are macro-friendly (proteins per calorie = 0.25) and have an average rating of at least 4.0 stars is equal to 0.5. There are no values in which the permuted result is was less than our observed statistic which means our p-value was 0.0.
 
+## Framing a Prediction Problem
+
+Our prediction problem is focusing on whether or not recipes that are macro-friendly can predict a higher average rating. With this prediction problem at hand, we determined that this problem is classified under a regression type. Our model is a classifier that focuses on binarizing the data, so we performed binary classification in the model experiment. The response variable we are predicting is the average rating as we were hoping to determine if macro-friendly recipes were considered above average in rating, and that was the main factor. The metric we are using to evaluate the model was RMSE or root mean squared error and the reason we decided on this metric was that we found it to be more accurate with the training model, than the other test metrics. The only information that we know of are characteristics of the recipes such as how many minutes it takes to complete, number of steps to complete, and nutritional value of the recipe. We wouldn’t know information about the reviews written and the ratings it received yet.
+
+## Baseline Model
+
+The model is a pipeline that performs on the features but is classified by linear regression. The preprocessing step involves binarizing three features: minutes, n_steps, and proteins_per_calorie.
+The features used in the model are:
+1. minutes: Quantitative
+2. n_steps: Quantitative
+3. proteins_per_calorie: Quantitative
+The target variable is ‘avg_rating’ for our model.
+The pipeline in our baseline model consists of two main steps, which is applying the binarization to the specified features and using linear regression to fit the model on the preprocessed data. In terms of model performance, the model is evaluated using the root mean squared error (RMSE) and the R-squared score on both the training and test sets. The model that was developed we did not consider “good” as the factors that we looked into when determining the performance whether the RMSE values were lower in value which indicates a better fit or the R-squared score was close to 1. Based on our results, we determined it was difficult to state that the performance was “good” definitively,  and there were definitely areas for improvement in which the model could be more fitting as there were some discrepancies between the train and test scores that were messing with its general performance and test accuracy.
+
+## Final Model
+
+In the final model, the features selected are minutes, proteins_per_calorie, and tags. These features were chosen for the following reasons:
+1. Minutes: This feature represents the time required to prepare the dish. It is a relevant factor as the preparation time can impact the overall rating of the recipe. Dishes that take too long might be rated lower if the outcome isn't perceived as worth the effort.
+2. Proteins per Calorie: This feature captures the nutritional density of the dish in terms of protein content. High-protein diets are popular for health and fitness reasons, and recipes that offer more protein per calorie could be rated higher due to being healthier options.
+3. Tags: This categorical feature includes various labels associated with the recipe (e.g., vegan, dessert, quick). These tags can significantly influence ratings  based on the type of dish and whether it meets dietary preferences or occasions.
+The modeling algorithm chosen is Ridge Regression, which is a regularized linear regression technique. Regularization helps prevent overfitting by penalizing large coefficients.
+The hyperparameters that ended up performing the best are:
+* alpha: This parameter controls the strength of the regularization. The best performing values found in the grid search were in the range of [0.1, 1.0, 10.0, 100.0].
+* fit_intercept: The boolean parameter indicates whether to fit the intercept term or not. 
+The hyperparameters were selected using GridSearchCV, which performs a search over specified parameter values for an estimator. The grid search was done using  a cross-validation strategy involving cv=5, and scored using the negative mean squared error (neg_mean_squared_error). The method allowed us to evaluate all combinations of the provided hyperparameter values and select the combination with the optimal performance, using the score method.
+To evaluate the performance improvement of the final model over the baseline model, the following metrics were compared: Train Score, Test Score, RMSE Train, and RMSE Test. These metrics gave an insightful view of the model's performance in terms of both fit and predictive accuracy. Improvement is expected in terms of lower RMSE and higher R-squared scores. Overall, these changes in metrics used as well as the ridge regression method allowed for a better predictive performance that was more well fit than the baseline model we had created, which allowed for more accurate results when determining our conclusions to the tests.
+
+## Fairness Analysis
+
+Group X: Group 1 (recipes with minutes less than or equal to the mean minutes)
+Group Y: Group 2 (recipes with minutes greater than the mean minutes)
+The Evaluation Metric used in the model was the R-squared score, used to evaluate the model on different groups.
+Hypotheses
+* Null Hypothesis (H0): Our model is fair. There is no difference in model performance (R-squared score) between Group 1 and Group 2. Any observed difference is due to random chance.
+* Alternative Hypothesis (H1): Our model is unfair. There is a significant difference in model performance (R-squared score) between Group 1 and Group 2.
+The observed difference between the R-squared scores of Group 1 and Group 2 is used as the test statistic.
+Significance Level:
+The chosen significance level that depicted the experiment was 5% or 0.05
+The resulting p-value is calculated as the proportion of permuted differences that are greater than or equal to the absolute observed difference.
+Based on the analysis of the model, the p-value suggests we would reject the null hypothesis, as we can deduce there is a significant difference in model performance between groups 1 and 2 under the given significance level.
