@@ -30,36 +30,30 @@ The first step we took was merging the two dataframes: Recipe and Ratings. After
     width="800"
     height="600"
     frameborder="0"
-    style="margin-bottom: 0px;"
 ></iframe>
-<br>
-<p>
-    The figure above displays a univariate analysis of the proteins per calorie column. We can see how there is a right skew present with a mean around 0.1.
-</p>
+
+The figure above displays a univariate analysis of the proteins per calorie column. We can see how there is a right skew present with a mean around 0.1.
+
 
 <iframe
     src="assets/box_fig.html"
     width="800"
     height="600"
     frameborder="0"
-    style="margin-bottom: 0px;"
 ></iframe>
-<br>
-<p>
-    The figure above displays a bivariate analysis of proteins per calorie and its effect on average rating. There are slightly higher ratings for recipes that have a higher ratio of protein to calorie.
-</p>
+
+The figure above displays a bivariate analysis of proteins per calorie and its effect on average rating. There are slightly higher ratings for recipes that have a higher ratio of protein to calorie.
+
 
 <iframe
     src="assets/pivot_table.html"
     width="800"
     height="600"
     frameborder="0"
-    style="margin-bottom: 0px;"
 ></iframe>
-<br>
-<p>
-    The table above displays a pivot table that groups the columns 'proteins per calorie', 'n_steps', and 'minutes' by each unique value and gets an aggregate analysis of the mean average rating. We start to see higher ratings with less proteins per calorie, n_steps, and minutes, and the ratings start to go down as they increase. However, as we approach the end, where 'proteins per calorie', 'n_steps', and 'minutes' are all at their highest, the mean average ratings are similar to the ones in the beginning. We suspect the reasoning behind this is people usually enjoy recipes that are quick and easy to make and not the longer ones as much. However, people also enjoy very long recipes as usually recipes with a long preparation result in an extremely tasty dish.
-</p>
+
+The table above displays a pivot table that groups the columns 'proteins per calorie', 'n_steps', and 'minutes' by each unique value and gets an aggregate analysis of the mean average rating. We start to see higher ratings with less proteins per calorie, n_steps, and minutes, and the ratings start to go down as they increase. However, as we approach the end, where 'proteins per calorie', 'n_steps', and 'minutes' are all at their highest, the mean average ratings are similar to the ones in the beginning. We suspect the reasoning behind this is people usually enjoy recipes that are quick and easy to make and not the longer ones as much. However, people also enjoy very long recipes as usually recipes with a long preparation result in an extremely tasty dish.
+
 
 
 ## Assessment of Missingness
@@ -68,12 +62,10 @@ The first step we took was merging the two dataframes: Recipe and Ratings. After
     width="800"
     height="600"
     frameborder="0"
-    style="margin-bottom: 0px;"
 ></iframe>
-<br>
-<p>
-    The distribution above shows a column in which 'average rating' does not depend on, namely, 'name'. We can see the observed statistic was 0.77 while there is a mean around 0.73 which is very close.
-</p>
+
+The distribution above shows a column in which 'average rating' does not depend on, namely, 'name'. We can see the observed statistic was 0.77 while there is a mean around 0.73 which is very close.
+
 
 ## Hypothesis Testing
 <iframe
@@ -81,9 +73,7 @@ The first step we took was merging the two dataframes: Recipe and Ratings. After
     width="800"
     height="600"
     frameborder="0"
-    style="margin-bottom: 0px;"
 ></iframe>
-<br>
-<p>
-    The distribution above demonstrates that we do not have significant evidence to reject the null hypothesis that recipes that are macro-friendly (proteins per calorie = 0.25) on average (> 50%), have an average rating of at least 4.0 stars.
-</p>
+
+The distribution above demonstrates that we do not have significant evidence to reject the null hypothesis that recipes that are macro-friendly (proteins per calorie = 0.25) on average (> 50%), have an average rating of at least 4.0 stars.
+
