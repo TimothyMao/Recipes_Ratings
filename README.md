@@ -32,6 +32,7 @@ The first step we took was merging the two dataframes: Recipe and Ratings. After
 | impossible rhubarb pie             |        55 |                   0.14 |         6 |            3 |
 | impossible seafood pie             |        45 |                   0.45 |         7 |            3 |
 
+
 The table above shows a shortened version of the dataframe we merged and cleaned.
 
 <iframe
@@ -40,7 +41,6 @@ The table above shows a shortened version of the dataframe we merged and cleaned
     height="600"
     frameborder="0"
 ></iframe>
-
 The figure above displays a univariate analysis of the proteins per calorie column. We can see how there is a right skew present with a mean around 0.1.
 
 
@@ -50,7 +50,6 @@ The figure above displays a univariate analysis of the proteins per calorie colu
     height="600"
     frameborder="0"
 ></iframe>
-
 The figure above displays a bivariate analysis of proteins per calorie and its effect on average rating. There are slightly higher ratings for recipes that have a higher ratio of protein to calorie.
 
 
@@ -60,7 +59,6 @@ The figure above displays a bivariate analysis of proteins per calorie and its e
     height="600"
     frameborder="0"
 ></iframe>
-
 The table above displays a pivot table that groups the columns 'proteins per calorie', 'n_steps', and 'minutes' by each unique value and gets an aggregate analysis of the mean average rating. We start to see higher ratings with less proteins per calorie, n_steps, and minutes, and the ratings start to go down as they increase. However, as we approach the end, where 'proteins per calorie', 'n_steps', and 'minutes' are all at their highest, the mean average ratings are similar to the ones in the beginning. We suspect the reasoning behind this is people usually enjoy recipes that are quick and easy to make and not the longer ones as much. However, people also enjoy very long recipes as usually recipes with a long preparation result in an extremely tasty dish.
 
 
@@ -72,7 +70,6 @@ The table above displays a pivot table that groups the columns 'proteins per cal
     height="600"
     frameborder="0"
 ></iframe>
-
 The distribution above shows a column in which 'average rating' does not depend on, namely, 'name'. We can see the observed statistic was 0.77 while there is a mean around 0.73 which is very close.
 
 
@@ -86,7 +83,6 @@ The null hypothesis that we implemented in our model was that the ratio of recip
     height="600"
     frameborder="0"
 ></iframe>
-
 The distribution above demonstrates that we have significant evidence to reject the null hypothesis that the proportion recipes that are macro-friendly (proteins per calorie = 0.25) and have an average rating of at least 4.0 stars is equal to 0.5. There are no values in which the permuted result is was less than our observed statistic which means our p-value was 0.0.
 
 ## Framing a Prediction Problem
