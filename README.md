@@ -82,5 +82,16 @@ The null hyothesis that we implemented in our model was to determine whether rec
 ## Framing a Prediction Problem
 Our prediction problem is focusing on whether or not recipes that are macro-friendly can predict a higher average rating. With this prediction problem at hand, we determined that this problem is classified under a regression type. Our model is a classifier that focuses on binarizing the data, so we performed binary classification in the model experiment. The response variable we are predicting is the average rating as we were hoping to determine if macro-friendly recipes were considered above average in rating, and that was the main factor. The metric we are using to evaluate the model was RMSE or root mean squared error and the reason we decided on this metric was that we found it to be more accurate with the training model, than the other test metrics. (Change as needed)
 ## Baseline Model
+The model is a pipeline that performs on the features but classified by linear regression. The preprocessing step involves binarizing three features: minutes, n_steps, and proteins_per_calorie.
+
+The features used in the model are:
+1. minutes: Quantitative
+2. n_steps: Quantitative
+3. proteins_per_calorie: Quantitative
+
+The target variable is ‘avg_rating’ for our model.
+
+The pipeline in our baseline model consists of two main steps, which is applying the binarization to the specified features and using linear regression to fit the model on the preprocessed data. In terms of model performance, the model is evaluated using the root mean squared error (RMSE) and the R-squared score on both the training and test sets. The model that was developed we did not consider “good” as the factors that we looked into when determining the performance whether the RMSE values were lower in value which indicates a better fit or the R-squared score was close to 1. Based on our results, we determine it was difficult to state that the performance was “good” definitively,  and there were areas for improvement in which model could be more fitting as there was some discrepancies between the train and test scores that was messing with its general performance and test accuracy.
 ## Final Model
+
 ## Fairness Analysis
