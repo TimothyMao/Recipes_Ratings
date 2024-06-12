@@ -92,6 +92,31 @@ The features used in the model are:
 The target variable is ‘avg_rating’ for our model.
 
 The pipeline in our baseline model consists of two main steps, which is applying the binarization to the specified features and using linear regression to fit the model on the preprocessed data. In terms of model performance, the model is evaluated using the root mean squared error (RMSE) and the R-squared score on both the training and test sets. The model that was developed we did not consider “good” as the factors that we looked into when determining the performance whether the RMSE values were lower in value which indicates a better fit or the R-squared score was close to 1. Based on our results, we determine it was difficult to state that the performance was “good” definitively,  and there were areas for improvement in which model could be more fitting as there was some discrepancies between the train and test scores that was messing with its general performance and test accuracy.
+
 ## Final Model
 
+
 ## Fairness Analysis
+Group X: Group 1 (recipes with minutes less than or equal to the mean minutes)
+
+Group Y: Group 2 (recipes with minutes greater than the mean minutes)
+
+
+The Evaluation Metric used in the model was the R-squared score,  used to evaluate the model on different groups.
+
+Hypotheses
+* Null Hypothesis (H0): Our model is fair. There is no difference in model performance (R-squared score) between Group 1 and Group 2. Any observed difference is due to random chance.
+* Alternative Hypothesis (H1): Our model is unfair. There is a significant difference in model performance (R-squared score) between Group 1 and Group 2.
+
+The observed difference between the R-squared scores of Group 1 and Group 2 is used as the test statistic.
+
+Significance Level
+The chosen significance level that depicted the experiment was 5% or 0.05
+
+Permutation Test
+* 50 permutations are used to generate the distribution under the null hypothesis.
+* These permutations were calculated differences in R-squared scores between the  groups.
+
+The resulting p-value is calculated as the proportion of permuted differences that are greater than or equal to the absolute observed difference.
+
+Based on the the analysis of the model, the p-value suggests we would fail to reject the null hypothesis, as we can deduced there is no difference in model performance between groups 1 and 2 under the given significance level. (change this if needed)
