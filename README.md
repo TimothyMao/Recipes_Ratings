@@ -78,14 +78,14 @@ The distribution above shows a column in which 'average rating' does not depend 
 
 ## Hypothesis Testing
 
-The null hypothesis that we implemented in our model was that the ratio of recipes that are macro-friendly (proteins per calorie = 0.25) and have an average rating of at least 4.0 stars is equal to 0.5. Conversely, the alternative hypothesis was that the recipes that are macro friendly have an average rating less than 4.0 stars. To determine this, we decided that we would use a difference of means as a test-statistic as we approached the model with a permutation test. The test statistic observed the difference of the observed proportion of data given by the macro-friendly recipes subtracted by an observance level of 0.5 since that is the value being tested through the null and alternative hypothesis. We believed that a permutation test was applicable for this model since we didn’t know what the population distribution looked like. Similarly, a difference in means fit the test based on the data we observed because this is a one sided t test. Given our choice of significance level, which was 0.05 because we believed this was reasonable in relation to the data, after the computation of the p-value came out to be 1.0, we concluded we do not have sufficient evidence to reject the null hypothesis and therefore, we do not have significant evidence to say that on average, macro friendly recipes have an average rating of 4.0 or higher.
+The null hypothesis that we implemented in our model was that the ratio of recipes that are macro-friendly (proteins per calorie = 0.25) and have an average rating of at least 4.0 stars is equal to 0.5. Conversely, the alternative hypothesis was that the recipes that are macro friendly have an average rating less than 4.0 stars. To determine this, we decided that we would use a difference of means as a test-statistic as we approached the model with a permutation test. The test statistic observed the difference of the observed proportion of data given by the macro-friendly recipes subtracted by an observance level of 0.5 since that is the value being tested through the null and alternative hypothesis. We believed that a permutation test was applicable for this model since we didn’t know what the population distribution looked like. Similarly, a difference in means fit the test based on the data we observed because this is a one sided t test. Given our choice of significance level, which was 0.05 because we believed this was reasonable in relation to the data, after the computation of the p-value came out to be 0.0, we concluded we have sufficient evidence to reject the null hypothesis.
 
 <iframe
-    src="assets/fig_permutation.html"
+    src="assets/fig_permutation_test.html"
     width="800"
     height="600"
     frameborder="0"
 ></iframe>
 
-The distribution above demonstrates that we do not have significant evidence to reject the null hypothesis that the proportion recipes that are macro-friendly (proteins per calorie = 0.25) and have an average rating of at least 4.0 stars is equal to 0.5. There are no values in which the permuted result is was less than our observed statistic.
+The distribution above demonstrates that we have significant evidence to reject the null hypothesis that the proportion recipes that are macro-friendly (proteins per calorie = 0.25) and have an average rating of at least 4.0 stars is equal to 0.5. There are no values in which the permuted result is was less than our observed statistic which means our p-value was 0.0.
 
