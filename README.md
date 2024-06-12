@@ -24,8 +24,9 @@ Our dataset has a total of 234429 rows and the relevant columns that we use cons
 
 The first step we took was merging the two dataframes: Recipe and Ratings. After merging, we saw that ratings had missing values but they were all categorized with 0's so we filled in the 0's with np.NaN's. We then proceeded to make an average rating column in which we use as our predictor variable. In order to get the ratio of proteins to calories, we accessed the 'nutrition' column and extracted the protein and calorie information and created a new column called 'proteins_per_calorie'. There were some values that were missing due to 0 calories or proteins so we filled those values in with 0. 
 
+
 <iframe
-  src="assets/fig_hist_avg_rating.html"
+  src="assets/box_fig.html"
   width="800"
   height="600"
   frameborder="0"
