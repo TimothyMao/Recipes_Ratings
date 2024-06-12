@@ -26,8 +26,20 @@ The first step we took was merging the two dataframes: Recipe and Ratings. After
 
 
 <iframe
+  src="assets/fig_hist_protein_per_calorie.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+The figure above displays a univariate analysis of the proteins per calorie column. We can see how there is a right skew present with a mean around 0.1.
+
+
+<iframe
   src="assets/box_fig.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+The figure above displays a bivariate analysis of proteins per calorie and its effect on average rating. There are slightly higher ratings for recipes that have a higher ratio of protein to calorie.
