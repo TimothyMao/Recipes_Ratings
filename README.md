@@ -96,6 +96,7 @@ The features used in the model are:
 1. minutes: Quantitative
 2. n_steps: Quantitative
 3. proteins_per_calorie: Quantitative
+
 The target variable is ‘avg_rating’ for our model.
 The pipeline in our baseline model consists of two main steps, which is applying the binarization to the specified features and using linear regression to fit the model on the preprocessed data. In terms of model performance, the model is evaluated using the root mean squared error (RMSE) and the R-squared score on both the training and test sets. The model that was developed we did not consider “good” as the factors that we looked into when determining the performance whether the RMSE values were lower in value which indicates a better fit or the R-squared score was close to 1. Based on our results, we determined it was difficult to state that the performance was “good” definitively,  and there were definitely areas for improvement in which the model could be more fitting as there were some discrepancies between the train and test scores that were messing with its general performance and test accuracy.
 
