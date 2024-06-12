@@ -58,6 +58,8 @@ The first step we took was merging the two dataframes: Recipe and Ratings. After
     The table above displays a pivot table that groups the columns 'proteins per calorie', 'n_steps', and 'minutes' by each unique value and gets an aggregate analysis of the mean average rating. We start to see higher ratings with less proteins per calorie, n_steps, and minutes, and the ratings start to go down as they increase. However, as we approach the end, where 'proteins per calorie', 'n_steps', and 'minutes' are all at their highest, the mean average ratings are similar to the ones in the beginning. We suspect the reasoning behind this is people usually enjoy recipes that are quick and easy to make and not the longer ones as much. However, people also enjoy very long recipes as usually recipes with a long preparation result in an extremely tasty dish.
 </p>
 
+
+## Assessment of Missingness
 <iframe
     src="assets/fig_name.html"
     width="800"
@@ -69,6 +71,7 @@ The first step we took was merging the two dataframes: Recipe and Ratings. After
     The distribution above shows a column in which 'average rating' does not depend on, namely, 'name'. We can see the observed statistic was 0.77 while there is a mean around 0.73 which is very close.
 </p>
 
+## Hypothesis Testing
 <iframe
     src="assets/fig_permutation.html"
     width="800"
