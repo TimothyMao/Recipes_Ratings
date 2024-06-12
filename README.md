@@ -30,6 +30,7 @@ The first step we took was merging the two dataframes: Recipe and Ratings. After
     width="800"
     height="600"
     frameborder="0"
+    style="margin-bottom: 0px;"
 ></iframe>
 <br>
 <p>
@@ -41,6 +42,7 @@ The first step we took was merging the two dataframes: Recipe and Ratings. After
     width="800"
     height="600"
     frameborder="0"
+    style="margin-bottom: 0px;"
 ></iframe>
 <br>
 <p>
@@ -48,10 +50,11 @@ The first step we took was merging the two dataframes: Recipe and Ratings. After
 </p>
 
 <iframe
-        src="assets/pivot_table.html"
-        width="800"
-        height="600"
-        frameborder="0"
+    src="assets/pivot_table.html"
+    width="800"
+    height="600"
+    frameborder="0"
+    style="margin-bottom: 0px;"
 ></iframe>
 <br>
 <p>
@@ -65,6 +68,7 @@ The first step we took was merging the two dataframes: Recipe and Ratings. After
     width="800"
     height="600"
     frameborder="0"
+    style="margin-bottom: 0px;"
 ></iframe>
 <br>
 <p>
@@ -77,8 +81,9 @@ The first step we took was merging the two dataframes: Recipe and Ratings. After
     width="800"
     height="600"
     frameborder="0"
+    style="margin-bottom: 0px;"
 ></iframe>
-<<br>
+<br>
 <p>
     The distribution above demonstrates that we do not have significant evidence to reject the null hypothesis that recipes that are macro-friendly (proteins per calorie = 0.25) on average (> 50%), have an average rating of at least 4.0 stars.
 </p>
