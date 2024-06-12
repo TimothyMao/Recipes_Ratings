@@ -50,19 +50,10 @@ The figure above displays a bivariate analysis of proteins per calorie and its e
 ></iframe>
 The table above displays a pivot table that groups the columns 'proteins per calorie', 'n_steps' and, 'minutes' by each unique value and gets an aggregate analysis of the mean average rating. We start to see higher ratings with less proteins per calorie, n_steps, and minutes and the ratings start to go down as they increase. However, as we approach the end, where 'proteins per calorie', 'n_steps', and 'minutes' are all at their highest, the mean average ratings are similar to the ones in the beginning. We suspect the reasoning behind this is people usually enjoy recipes that are quick and easy to make and not the longer ones as much. However, people also enjoy very long recipes as usually recipes with a long preparation results in an extremely tasty dish.
 
-<div style="display: flex;">
-  <iframe
-    src="assets/fig_name.html"
-    width="800"
-    height="600"
-    frameborder="0"
-  ></iframe>
-
-  <iframe
-    src="assets/fig_description.html"
-    width="800"
-    height="600"
-    frameborder="0"
-  ></iframe>
-</div>
-The first distribution shows a column in which 'average rating' does not depend on, namely, 'name'. We can see the observed statistic was 0.77 while there is a mean around 0.73 which is very close. The second distribution is a column in which 'average rating' does depend on, namely, 'description'. Here, we have an observed test statistic of 0.08 while the mean is centered around 0.99.
+<iframe
+src="assets/fig_name.html"
+width="800"
+height="600"
+frameborder="0"
+></iframe>
+The distribution above shows a column in which 'average rating' does not depend on, namely, 'name'. We can see the observed statistic was 0.77 while there is a mean around 0.73 which is very close. 
