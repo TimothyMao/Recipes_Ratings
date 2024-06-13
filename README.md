@@ -136,4 +136,4 @@ The chosen significance level that depicted the experiment was 5% or 0.05
 
 The resulting p-value is calculated as the proportion of permuted differences that are greater than or equal to the absolute observed difference.
 
-Based on the the analysis of the model, the p-value suggests we would fail to reject the null hypothesis, as we can deduced there is no difference in model performance between groups 1 and 2 under the given significance level. (change this if needed)
+Based on the the analysis of the model, the p-value suggests we would fail to reject the null hypothesis, as we can deduced there is no difference in model performance between groups 1 and 2 under the given significance level.
